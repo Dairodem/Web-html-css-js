@@ -1,0 +1,40 @@
+
+.board
+{
+    width: 600px;
+    height: 400px;
+    left: 50%;
+    position: absolute;
+    margin-left: -300px;
+    border:  solid rgb(85, 85, 85) 2px;
+}
+.colSelect
+{
+    position: absolute;
+    height: 400px;
+    width: 100px;
+    border-style:groove;
+    border : groove 5px;
+}
+
+.space
+{
+    position: relative;
+    height: 480px;
+    width: 620px;
+    padding: 10px;
+}
+.canvas
+{
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: 50px;
+}
+.currplayer
+{ 
+    font-size: 20px;
+    font-weight: 500;
+}

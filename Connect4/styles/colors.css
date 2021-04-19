@@ -1,0 +1,53 @@
+
+.bg-main
+{
+    background-color: #025955;
+}
+.player-yellow
+{
+    color: rgb(215, 236, 28);
+}
+.player-red
+{
+    color: rgb(255, 70, 70);
+}
+.border-yellow
+{
+    border-color: rgba(216, 236, 28, 0.493);
+}
+.border-red
+{
+    border-color: rgba(182, 65, 65, 0.493);
+}
+.border-gray
+{
+    border-color: rgba(110, 108, 108, 0.493);
+}
+.bg-dGreen
+{
+    background-color: #025955;
+}
+.bg-mGreen
+{
+    background-color: #3b7c79;
+}
+.bg-lGreen
+{
+    background-color: #00917c;
+}
+.bg-brown
+{
+    background-color: #433520;
+}
+.bg-creme
+{
+    background-color: #fde8cd;
+}
+.bg-yellow
+{
+    background-color: rgba(215, 236, 28, 0.60);
+}
+.bg-red
+{
+    background-color: rgb(255, 70, 70, 0.60);
+}
