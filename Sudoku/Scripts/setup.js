@@ -6,8 +6,6 @@ let board= [[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]];
 let counter = 0;
 let squares =  document.getElementsByClassName("square");
-let hLine = [];
-let nrUsed= [];
 
 
 newBoard();
@@ -20,69 +18,77 @@ function newBoard()
     randomizeNona(4);
     randomizeNona(8);
 
-    //step2 (fill nona1)
-    fillNona(1);
+    //step2
+    fillNona(2);
+    fillNona(6);
 
 }
 function fillNona(nona)
 {
-        //set own nonaposibilities
-        let nonaAvailable = [1,2,3,4,5,6,7,8,9];
-        let boardRow = 0;
+    //set own nonaposibilities
+    let isfilled = true;
+    let nonaUsed = [];
+    let nonaRow = Math.floor(nona/3);
+    let nonaCol = nona%3;
+    //let x = 8;
+
+    //for every square
+    for(let x = 0; x < 9 ; x++)
+    {
         let nrUsedRow = [];
         let nrUsedCol = [];
 
-        //for every square
-            //x = rand(posibilities)
-            //remove x from nonaposibilities
-        
+        let colStart = x % 3;
+        let rowStart = Math.floor(x/3);
         let currAvailable = [1,2,3,4,5,6,7,8,9];
-        //check row for used numbers   
-        for (let n = 0; n < 3; n++) 
+
+        //check current row for used numbers   
+        for (let n = nonaRow; n < 3 + nonaRow; n++) 
         {  
-            for (let sq = 0; sq < 3; sq++) 
+            for (let sq= rowStart*3 ; sq < 3+ (rowStart*3); sq++) 
             {  
-                if (board[n][sq] != 0) 
+                if (board[n][sq] !== 0)
                 {
-                    nrUsedRow.push(board[n][sq]);
+                       nrUsedRow.push(board[n][sq]);
                 }
             }
-        }
-        //check col for used numbers
-        for (let n = 0; n < 9; n++) 
-        {  
-            if (n%3 === 1) 
-            {
-                for (let sq = 0; sq < 9; sq++) 
-                {  
-                    if (board[n][sq] !== 0 && sq%3 === 0) 
+         }
+         //check current col for used numbers
+          for (let n = nonaCol; n < 9; n+=3)
+          {  
+                 for (let sq = colStart; sq < 9; sq+=3) 
+                  {  
+                     if (board[n][sq] !== 0) 
                     {
-                        nrUsedCol.push(board[n][sq]);
+                         nrUsedCol.push(board[n][sq]);
                     }
-                }
-            }
+                 }
         }
-
-        //get possiblities from (nona,row,col)
-        nrUsed = combinedArrays(nrUsedRow,nrUsedCol);
-        
-
+    
+        //get possiblities from (!nona!,row,col)
+        let nrUsed = combinedArrays(nrUsedRow,nrUsedCol);
+        nrUsed = combinedArrays(nrUsed, nonaUsed);
+            
+    
         for (let i = 0; i < nrUsed.length; i++) 
         {
-            currAvailable.splice(currAvailable.indexOf(nrUsed[i]),1);
+            if (currAvailable.indexOf(nrUsed[i]) < currAvailable.length) 
+            {
+                currAvailable.splice(currAvailable.indexOf(nrUsed[i]),1);
+            }
         }
+            
+        let rnd = Math.floor(Math.random()*currAvailable.length);
+    
+        let currNr = currAvailable[rnd];
+        console.log(currNr);
+        board[nona][x] = currNr;
+        nonaUsed.push(currNr);
 
-
-
-
-        
-        console.log(currAvailable);
-
-
-
-
+    }       
+    
 }
-function combinedArrays(arr1,arr2)
+function combinedArrays(arr1, arr2)
 {
     let arr = [];
 
