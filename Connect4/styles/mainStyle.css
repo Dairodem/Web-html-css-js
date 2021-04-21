@@ -1,10 +1,10 @@
 
-.btn:hover 
-{
-    background-color: slateblue;
+.startbtn{
+    line-height: 1;
+    font-size: 12px;
+    margin-left: 5px;
 }
-.minibtn
-{   
+.minibtn{  
     line-height: 1;
     height: 16px;
     width: 20px;
@@ -12,77 +12,60 @@
     font-weight: bold;
     padding: 0px;
     margin-left: 2px;
-
 }
-.startbtn
-{
-    line-height: 1;
-    font-size: 12px;
-    margin-left: 5px;
+.btn:hover {
+    background-color: slateblue;
 }
-.dBorder
-{
+.dBorder{
     border: groove rgb(58, 57, 57) 5px;
 }
-.sideblock
-{
+.sideblock{
     display: inline-block;
     width: 300px;
     height: 480px;
     margin-left: 5px;
 }
-.screen
-{
+.screen{
     background-color: #00917c;
     padding: 5px;
 }
-.cont
-{
+.cont{
     text-align: center;
 }
-.sideheader
-{
+.sideheader{
     border-bottom: solid black 2px;
 }
-.sideheader label
-{
+.sideheader label{
     text-decoration: underline;   
     font-size: 40px;
     font-weight: 900;
 }
-.sidesubh label
-{
+.sidesubh label{
     font-size: 16px;
     font-weight: 700;
 }
-.adjRoundholder
-{
+.adjRoundholder{
     margin: 5px;
     display: flex;
     border: solid black 2px;
     padding: 5px;
 }
-.adjbtnholder
-{
+.adjbtnholder{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
-.roundnumber
-{
+.roundnumber{
     height: 24px;
     width: 50px;
     margin: 0px 2px 0px 5px;
 }
-.border-s
-{
+.boards{
+    display: flex;
+}
+.border-s{
     border: solid black 1px;
 }
-.border-m
-{
+.border-m{
     border: solid black 2px;
-}
-.boards
-{
-    display: flex;
 }

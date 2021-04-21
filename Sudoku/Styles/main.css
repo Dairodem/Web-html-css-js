@@ -1,0 +1,31 @@
+
+body{
+    margin: 0px;
+    background-color: rgb(44, 44, 44);
+}
+.board{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+    margin-top: 50px;
+    width: 480px;
+    height: 480px;
+}
+.nonagon{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: black solid 2px;
+
+}
+.square{
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    border: black solid 1px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(216, 188, 128);
+}
+.closed{
+    background-color: darkgoldenrod;
+}
