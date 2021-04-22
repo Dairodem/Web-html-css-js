@@ -1,5 +1,9 @@
 
-
+/*random should be different
+*
+*start with '1' to fill every 'nonagon' at random place if possible else reroll random
+*
+*/
 
 let board= [[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],
@@ -14,13 +18,12 @@ setBoard(board);
 function newBoard()
 {
     //Step1
-    randomizeNona(0);
-    randomizeNona(4);
-    randomizeNona(8);
 
     //step2
-    fillNona(2);
-    fillNona(6);
+    for (let n = 0; n < board.length; n++) 
+    {
+        fillNona(n);
+    }
 
 }
 function fillNona(nona)
