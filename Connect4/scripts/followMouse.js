@@ -1,7 +1,10 @@
 
 
 document.getElementById("overlay").onmousemove = findObjectCoords;
-document.getElementById("canvas").onmousedown = createChip;
+if (!isfalling) 
+{
+  document.getElementById("canvas").onmousedown = createChip;
+}
 
 function findObjectCoords(mouseEvent)
 {

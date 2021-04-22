@@ -12,9 +12,9 @@
     <meta charset="utf-8">
   </head>
 
-<body class="bg-dGreen" onload="startGame()">
-  <div class="d-flex">
-    <div class="screen bg-lGreen d-flex ">
+<body class="bg-main" onload="startGame()">
+  <div class="d-flex" >
+    <div class="screen bg-lGreen d-flex">
       <div id="space" class="space bg-dGreen dBorder">
         <div id="canvas" class="canvas bg-dGreen">
 
@@ -33,7 +33,7 @@
       </div>
 
 
-      <div class="bg-main sideblock dBorder cont">
+      <div class="bg-dGreen sideblock dBorder cont">
 
         <div class="sideheader">
           <label>
@@ -64,8 +64,7 @@
                   -
                 </div>
               </div>
-              
-              <div class="btn startbtn border-s bg-lGreen">
+              <div class="btn startbtn border-s bg-lGreen" onclick="resetBoard()">
                 <label>
                   Start!
                 </label>
@@ -81,7 +80,7 @@
           </div>
           <div>
             <label id="currPlayerColor" class="currplayer player-yellow">
-              yellow
+              YELLOW
             </label>
           </div>
 

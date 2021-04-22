@@ -17,7 +17,6 @@ setBoard(board);
 
 function newBoard()
 {
-    //Step1
 
     //step2
     for (let n = 0; n < board.length; n++) 
