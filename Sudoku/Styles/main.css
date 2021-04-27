@@ -29,3 +29,6 @@ body{
 .closed{
     background-color: darkgoldenrod;
 }
+.new{
+    background-color: rgb(60, 184, 11);
+}

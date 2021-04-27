@@ -1,0 +1,25 @@
+
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    background: #414141;
+}
+header{
+    background-color: rgba(14, 158, 127, 0.76);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+
+}
+.content{
+    height: 200vh;
+    background-blend-mode:multiply;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+
+}
